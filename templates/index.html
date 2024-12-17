@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block head %}
+<Title>Task Smask</Title>
+{% endblock %}
+
+{% block body %}
+<h1>Select options</h1>
+<a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('reports') }}">Generate Report</a>
+<a href="{{ url_for('settings') }}">Settings</a>
+{% endblock %}

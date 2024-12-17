@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block head %}
+<Title>Reports Section</Title>
+{% endblock %}
+
+{% block body %}
+<h1>Select the month to report on</h1>
+
+<form>
+    <label for="month-year-select">Select Month and Year:</label>
+    <input 
+        type="month" 
+        id="month-year-select" 
+        name="month-year"
+        min="2000-01" 
+        max="2030-12"
+    >
+</form>
+
+<script>
+    // Optional: Get selected month and year
+    document.getElementById('month-year-select').addEventListener('change', function() {
+        const selectedMonthYear = this.value;
+        console.log('Selected:', selectedMonthYear);
+        // selectedMonthYear will be in format 'YYYY-MM'
+    });
+</script>
+
+{% endblock %}
