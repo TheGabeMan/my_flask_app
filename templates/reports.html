@@ -6,7 +6,7 @@
 {% block body %}
 <h1>Select the month to report on</h1>
 
-<form>
+<form action="{{ url_for('reports') }}" method="post">
     <label for="month-year-select">Select Month and Year:</label>
     <input 
         type="month" 
@@ -15,7 +15,10 @@
         min="2000-01" 
         max="2030-12"
     >
+    <input type="submit" value="Get Report" id="btn_get_report">
 </form>
+
+Gevonden: {{ period }}
 
 <script>
     // Optional: Get selected month and year
